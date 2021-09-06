@@ -1,0 +1,33 @@
+.about__body {
+padding: 10px;
+}
+
+.about__content{
+  margin-top: 15px;
+  padding: 15px;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ @media screen and (min-width:990px) {
+   justify-content: space-evenly;
+ }
+}
+
+.about__content-image{
+  max-width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  & img{
+    display: block;
+    width: 100%;
+  }  
+}
+.about__paragraph{
+  max-width: 500px;
+  padding: 15px;
+  font-size: 15px;
+  background-color: transparent;
+  @media screen and (min-width:990px) {
+    max-width: 600px;
+  }
+}

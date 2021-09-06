@@ -1,0 +1,63 @@
+.banner{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: pink;
+  border: none;
+  position:relative;
+  
+}
+.image{
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+}
+.banner__text-box{
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+
+.banner__title{
+  font-family: $allison;
+  color: white;
+  font-size: 80px;
+  line-height: .9;
+  text-shadow: 1px 1px 15px rgba(0,0,0,.1);
+}
+.banner__subtitle{
+  line-height: 1;
+  padding-left: 10px;
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (min-width:768px) {
+  .banner__text-box{
+    bottom: 70px;
+    left: 80px;
+  }
+  .banner__subtitle{
+    font-size: 40px;
+  }
+  .banner__title{
+    font-size: 120px;
+  }
+}
+
+@media screen and (min-width:990px) {
+  
+  .banner__subtitle{
+    font-size: 50px;
+  }
+  .banner__title{
+    font-size: 160px;
+  }
+}
