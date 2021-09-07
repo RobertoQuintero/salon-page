@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const CustomCard = ({ title, subtitle, imgUrl }) => {
+const CustomCard = ({ title, subtitle, imgUrl, path }) => {
   const location = useLocation();
   return (
-    <div className="custom-card glass">
+    <div className="glass custom-card">
       <div className="custom-card__image">
         <div
           className="custom-card__image-src"
@@ -15,7 +15,7 @@ const CustomCard = ({ title, subtitle, imgUrl }) => {
         <h4 className="custom-card__description-title">{title}</h4>
         <p className="custom-card__description-subtitle">{subtitle}</p>
         {location.pathname !== "/servicios" && (
-          <Link to="/servicios" className="custom-card__link">
+          <Link to={`/${path}`} className="custom-card__link">
             ver más
           </Link>
         )}

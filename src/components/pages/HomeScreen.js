@@ -1,4 +1,5 @@
 import React from "react";
+import { data, products } from "../../data/data";
 import BackgroundFixedImage from "../molecules/BackgroundFixedImage";
 import About from "../organisms/About";
 import PopularItems from "../organisms/PopularItems";
@@ -19,9 +20,8 @@ const ContentBox = () => {
   return (
     <>
       <About />
-      <PopularItems />
-      <About />
-      <About />
+      <PopularItems data={data} title="Populares" path="servicios" />
+      <PopularItems data={products} title="Productos" path="productos" />
     </>
   );
 };

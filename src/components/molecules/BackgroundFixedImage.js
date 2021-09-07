@@ -18,6 +18,7 @@ const BackgroundFixedImage = ({ component: Componente, image }) => {
         width: "100vw",
         backgroundColor: "transparent",
       }}
+      className="large-pading"
     >
       <div
         style={{

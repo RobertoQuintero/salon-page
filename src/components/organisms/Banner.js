@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useLocation } from "react-router-dom";
 import ParallaxImage from "../molecules/ParallaxImage";
 import AppButton from "../ui/buttons/AppButton";
@@ -27,7 +27,7 @@ const Banner = () => {
 
 export default Banner;
 
-const ContentBox = ({ path }) => {
+const ContentBox = memo(({ path }) => {
   return (
     <div className="banner__text-box">
       {path === "/" ? (
@@ -43,4 +43,4 @@ const ContentBox = ({ path }) => {
       )}
     </div>
   );
-};
+});

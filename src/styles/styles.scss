@@ -3,9 +3,13 @@
 @import './base/base';
 @import './base/ui';
 
+@import './vendors/font-awesome.css';
+
 //components
 @import './components/banner';
 @import './components/navbar';
 @import './components/about';
 @import './components/popular';
 @import './components/services';
+@import './components/products';
+@import './components/footer';

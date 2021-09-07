@@ -1,33 +1,32 @@
 .popular-items{
   padding: 0 15px ;
 }
-.custom-card__container{margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  &>*{
-    flex-basis: 100%;
+.custom-card__container{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
     
     @media screen and (min-width:500px) {
-      flex-basis: 48%;
+      grid-template-columns: repeat(2, 1fr);
 
     }
     @media screen and (min-width:990px) {
-      flex-basis: 24%;
-
-    }
-  }
+      grid-template-columns: repeat(4, 1fr);
+    } 
 }
-
 .custom-card{
-  width: 300px;
+  // width: 300px;
   height: 380px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 15px;
+  box-shadow: 0 2px 15px lighten($color: grey, $amount:40);
   &__link{
     color: darken($color: pink, $amount: 20);
-
+    margin-top: 5px;
+    text-align: left;
   }
 
   &:hover .custom-card__image-src{
@@ -54,7 +53,7 @@
 }
 .custom-card__description{
   padding: 10px;
-  text-align: center;
+  // text-align: center;
   &-title{
     font-size: 20px;
     margin-bottom: 5px;

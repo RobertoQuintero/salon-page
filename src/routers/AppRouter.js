@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Banner from "../components/organisms/Banner";
+import Footer from "../components/organisms/Footer";
 import Navbar from "../components/organisms/Navbar";
 import GalleryScreen from "../components/pages/GalleryScreen";
 import HomeScreen from "../components/pages/HomeScreen";
@@ -25,6 +26,7 @@ const AppRouter = () => {
           <Route path="/productos" component={ProductsScreen} />
           <Redirect to="/" />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

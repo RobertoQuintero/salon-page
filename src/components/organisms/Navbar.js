@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import AppLogo from "../ui/logo/AppLogo";
 
 const Navbar = () => {
-  const [offset, setOffset] = useState(0);
-  const handleScroll = () => setOffset(window.pageYOffset);
+  const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const showHide = () => {
+    setShow((prev) => !prev);
+  };
 
   return (
-    <nav style={{ width: `100vw` }}>
+    <nav style={{ width: `100vw` }} className={`${show ? "" : "backdrop"}`}>
       <div className="navbar break-points">
         <Link to="/">
           <AppLogo />
         </Link>
-        <div className="navbar__links">
+        <div className="navbar__button" onClick={showHide}>
+          <i className="fa fa-bars"></i>
+        </div>
+        <div className={`navbar__links ${show ? "click-menu" : ""}`}>
           <NavLink
             activeClassName="active"
             className="navbar__links-item"
@@ -58,4 +58,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

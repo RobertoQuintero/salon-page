@@ -1,0 +1,75 @@
+footer{
+  width: 100%;
+  background-color: lighten($color: pink, $amount: 0);
+  color: darken($color: #000000, $amount: 0);
+  background: linear-gradient(90deg,
+  darken($color:rgba(244,202,211,.9),$amount:4),
+  darken($color:rgba(244,202,211,.7),$amount:0),
+  darken($color:rgba(244,202,211,.9),$amount:4),
+  
+  );
+  backdrop-filter:blur(10px);
+
+  
+  
+}
+
+.footer{
+  padding: 30px 15px;
+  width: 100%;
+  color: darken($color: pink, $amount: 20);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  &>*{
+    flex-basis: 50%;
+  }
+  @media screen and (min-width:768px){
+   
+    padding: 30px 15px;
+    &>*{
+      flex-basis: auto;
+    }
+    
+  }
+}
+
+.footer__text{
+  font-size: 12px;
+  margin-bottom: 8px;
+  @media screen and(min-width:768px){
+    font-size: 14px;
+    
+  }
+}
+
+
+.footer__links-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  
+  
+  &-link{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: darken($color: pink, $amount: 10);
+    background-color: rgba(255,255,255,.5);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+  }
+  &-text{
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: darken($color: pink, $amount: 10);
+  }
+
+}
+.color{
+  color: darken($color: pink, $amount: 10);
+}
