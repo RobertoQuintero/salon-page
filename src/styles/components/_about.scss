@@ -8,26 +8,38 @@ padding: 10px;
  display: flex;
  justify-content: center;
  flex-wrap: wrap;
+@media screen and (min-width:768px) {
+    flex-wrap: nowrap;
+ }
  @media screen and (min-width:990px) {
    justify-content: space-evenly;
  }
 }
 
 .about__content-image{
-  max-width: 300px;
+  // max-width: 300px;
   border-radius: 5px;
   overflow: hidden;
+  
   & img{
+    transform: perspective(500px) translateZ(45px) rotate(-2deg);
     display: block;
     width: 100%;
+    max-width: 400px;
+    transition: transform .4s ease;
+    &:hover{
+      transform: perspective(500px) translateZ(60px);
+    }
   }  
 }
 .about__paragraph{
   max-width: 500px;
-  padding: 15px;
+  padding: 15px 0;
   font-size: 15px;
   background-color: transparent;
-  @media screen and (min-width:990px) {
-    max-width: 600px;
+  @media screen and (min-width:768px) {
+    // flex-basis: 80%;
+    padding: 0 15px;
+
   }
 }
