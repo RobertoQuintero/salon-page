@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(300px, auto);
     
     @media screen and (min-width:500px) {
       grid-template-columns: repeat(2, 1fr);
@@ -18,25 +18,30 @@
 }
 .custom-card{
   // width: 300px;
-  height: 380px;
+  height: 410px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 15px;
   box-shadow: 0 2px 15px lighten($color: grey, $amount:40);
   &__link{
     color: darken($color: pink, $amount: 20);
-    margin-top: 5px;
+    // margin-top: 5px;
     text-align: left;
   }
 
   &:hover .custom-card__image-src{
     transform: perspective(500px) translateZ(60px);
   }
+
+  @media screen and(min-width:500px){
+    height: 380px;
+    
+  }
 }
 
 .custom-card__image {
   width: 100%;
-  height: 75%;
+  height: 78%;
   overflow: hidden;
   &-src {
     transition: .3s ease; 
@@ -56,10 +61,11 @@
   // text-align: center;
   &-title{
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   &-subtitle{
     font-size: 15px;
+    line-height: 1;
 
   }
 }

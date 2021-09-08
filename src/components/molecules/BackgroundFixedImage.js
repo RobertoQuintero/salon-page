@@ -4,9 +4,7 @@ const BackgroundFixedImage = ({ component: Componente, image }) => {
   const [height, setHeight] = useState(500);
   const ref = useRef();
   useEffect(() => {
-    setTimeout(() => {
-      setHeight(ref.current.getBoundingClientRect().height);
-    }, 100);
+    setHeight(ref.current.getBoundingClientRect().height);
   }, []);
 
   return (

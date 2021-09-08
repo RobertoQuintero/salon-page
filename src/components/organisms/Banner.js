@@ -3,9 +3,7 @@ import { useLocation } from "react-router-dom";
 import ParallaxImage from "../molecules/ParallaxImage";
 import AppButton from "../ui/buttons/AppButton";
 import BackgroundBanner from "../../assets/banner.jpg";
-
-const image =
-  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80";
+import BackgroundBannerSmall from "../../assets/pink.jpg";
 
 const Banner = () => {
   let location = useLocation();
@@ -18,7 +16,7 @@ const Banner = () => {
     />
   ) : (
     <ParallaxImage
-      image={image}
+      image={BackgroundBannerSmall}
       component={() => <ContentBox path={location.pathname} />}
       height="400px"
     />
@@ -31,13 +29,13 @@ const ContentBox = memo(({ path }) => {
   return (
     <div className="banner__text-box">
       {path === "/" ? (
-        <>
+        <div className="animate__animated animate__fadeInLeft">
           <h3 className="banner__subtitle">Estética Unisex</h3>
           <h1 className="banner__title">De Adriana</h1>
           <AppButton title="Contacto" onClick={() => {}} />
-        </>
+        </div>
       ) : (
-        <div>
+        <div className="animate__animated animate__fadeInDown">
           <h2 className="banner__path">{path.substring(1)}</h2>
         </div>
       )}

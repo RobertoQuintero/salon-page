@@ -21,13 +21,13 @@ const About = () => {
           <p className="about__paragraph">
             Muchisimos clientes, tanto damas como caballeros han quedado
             satisfechos y recomiendan totalmente los servicios que se ofrecen en
-            <b> Estética uisex de Adriana</b>.
+            <b> Estética unisex de Adriana</b>.
           </p>
           <p className="about__paragraph">
             ¡Estamos preparados para recibirte!¡No lo pienses más! Si tu deseo
             es realizarte un cambio de look, o talvés quieres lucir
             despampanante para alguna fecha importante o una ocasión especial y
-            dejar impresionados a todos.
+            dejar impresionados a todos, somos tu mejor opción!
           </p>
           <p className="about__paragraph">
             Llamanos sin compromiso y aparta una cita, o visitanos y estaremos

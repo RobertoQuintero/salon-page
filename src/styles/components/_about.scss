@@ -16,7 +16,7 @@ padding: 10px;
 }
 
 .about__content-image{
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   min-width: 300px;
   height: 300px;
@@ -42,7 +42,7 @@ padding: 10px;
   font-size: 15px;
   background-color: transparent;
   @media screen and (min-width:768px) {
-    padding: 0 15px 6px;
+    padding: 0 0 0 15px ;
 
   }
 }

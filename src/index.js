@@ -6,7 +6,6 @@ import "./styles/styles.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
     <BeautyApp />
   </React.StrictMode>,
   document.getElementById("root")

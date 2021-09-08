@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import AppLogo from "../ui/logo/AppLogo";
 

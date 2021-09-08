@@ -1,7 +1,9 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
+import { Redirect } from "react-router-dom";
 
 const GalleryScreen = () => {
+  if (window.location.pathname !== "/fotos") return <Redirect to="/" />;
   const data = [
     {
       image:
@@ -59,7 +61,7 @@ const GalleryScreen = () => {
     fontWeight: "bold",
   };
   return (
-    <div className="App">
+    <div className="App animate__animated animate__fadeIn">
       <div style={{ textAlign: "center" }}>
         <div
           style={{

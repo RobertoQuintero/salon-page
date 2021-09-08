@@ -14,7 +14,7 @@ const CustomCard = ({ title, subtitle, imgUrl, path }) => {
       <div className="custom-card__description">
         <h4 className="custom-card__description-title">{title}</h4>
         <p className="custom-card__description-subtitle">{subtitle}</p>
-        {location.pathname !== "/servicios" && (
+        {location.pathname === "/" && (
           <Link to={`/${path}`} className="custom-card__link">
             ver más
           </Link>
