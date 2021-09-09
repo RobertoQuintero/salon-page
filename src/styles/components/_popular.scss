@@ -25,8 +25,12 @@
   box-shadow: 0 2px 15px lighten($color: grey, $amount:40);
   &__link{
     color: darken($color: pink, $amount: 20);
-    // margin-top: 5px;
+    margin-top: 3px;
+    font-size: 14px;
     text-align: left;
+    &:hover{
+      text-decoration:underline;
+    }
   }
 
   &:hover .custom-card__image-src{
@@ -58,7 +62,6 @@
 }
 .custom-card__description{
   padding: 10px;
-  // text-align: center;
   &-title{
     font-size: 20px;
     margin-bottom: 4px;

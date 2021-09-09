@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const CustomCard = ({ title, subtitle, imgUrl, path }) => {
@@ -15,7 +15,7 @@ const CustomCard = ({ title, subtitle, imgUrl, path }) => {
         <h4 className="custom-card__description-title">{title}</h4>
         <p className="custom-card__description-subtitle">{subtitle}</p>
         {location.pathname === "/" && (
-          <Link to={`/${path}`} className="custom-card__link">
+          <Link to={path} className="custom-card__link">
             ver más
           </Link>
         )}
@@ -24,4 +24,4 @@ const CustomCard = ({ title, subtitle, imgUrl, path }) => {
   );
 };
 
-export default CustomCard;
+export default memo(CustomCard);

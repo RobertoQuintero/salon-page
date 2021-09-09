@@ -25,7 +25,12 @@ const Footer = () => {
       <div className="footer break-points">
         <div className="footer__links">
           {dataLinks.map((item) => (
-            <CustomLink icon={item.icon} text={item.text} href={item.href} />
+            <CustomLink
+              icon={item.icon}
+              text={item.text}
+              href={item.href}
+              key={item.href}
+            />
           ))}
         </div>
         <div>
