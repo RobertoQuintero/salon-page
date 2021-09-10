@@ -17,7 +17,8 @@
     } 
 }
 .custom-card{
-  // width: 300px;
+  background-color: transparent;
+  position: relative;
   height: 410px;
   border-radius: 10px;
   overflow: hidden;
@@ -43,6 +44,19 @@
   }
 }
 
+.custom-card::after{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg,rgba(255,255,255,.5),rgba(255,255,255,.3));
+  filter: blur(10px);
+  z-index: -10;
+}
+
 .custom-card__image {
   width: 100%;
   height: 78%;
@@ -62,6 +76,7 @@
 }
 .custom-card__description{
   padding: 10px;
+  background-color: transparent; 
   &-title{
     font-size: 20px;
     margin-bottom: 4px;

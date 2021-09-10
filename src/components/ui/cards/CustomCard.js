@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const CustomCard = ({ title, subtitle, imgUrl, path }) => {
   const location = useLocation();
   return (
-    <div className="glass custom-card">
+    <div className=" custom-card glass">
       <div className="custom-card__image">
         <div
           className="custom-card__image-src"

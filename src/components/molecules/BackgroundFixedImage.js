@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const BackgroundFixedImage = ({ component: Componente, image }) => {
+const BackgroundFixedImage = ({ children, image }) => {
   const [height, setHeight] = useState(500);
   const ref = useRef();
   useEffect(() => {
@@ -32,7 +32,8 @@ const BackgroundFixedImage = ({ component: Componente, image }) => {
           zIndex: -20,
         }}
       ></div>
-      <Componente />
+      {/* <Componente /> */}
+      {children}
     </div>
   );
 };

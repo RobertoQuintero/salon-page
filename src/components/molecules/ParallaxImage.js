@@ -16,7 +16,7 @@ const ParallaxImage = ({ image, component: Component, height }) => {
         className="image"
         style={{
           backgroundImage: `url(${image})`,
-          transform: `translateY(${offset * 0.5}px)`,
+          transform: `translateY(${offset * 0.6}px)`,
         }}
       ></div>
       <Component />

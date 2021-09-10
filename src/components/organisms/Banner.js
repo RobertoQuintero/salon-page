@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ParallaxImage from "../molecules/ParallaxImage";
 import AppButton from "../ui/buttons/AppButton";
@@ -18,7 +18,7 @@ const Banner = () => {
     <ParallaxImage
       image={BackgroundBannerSmall}
       component={() => <ContentBox path={location.pathname} />}
-      height="400px"
+      height="50vh"
     />
   );
 };
@@ -29,11 +29,11 @@ const ContentBox = memo(({ path }) => {
   return (
     <div className="banner__text-box">
       {path === "/" ? (
-        <div className="animate__animated animate__fadeInLeft">
+        <FadeIn duration={0.5} delay={1000}>
           <h3 className="banner__subtitle">Estética Unisex</h3>
           <h1 className="banner__title">De Adriana</h1>
           <AppButton title="Contacto" onClick={() => {}} />
-        </div>
+        </FadeIn>
       ) : (
         <div className="animate__animated animate__fadeInDown">
           <h2 className="banner__path">{path.substring(1)}</h2>
@@ -42,3 +42,23 @@ const ContentBox = memo(({ path }) => {
     </div>
   );
 });
+
+export const FadeIn = ({ children, duration = 0.3, delay = 1, from = 0 }) => {
+  const [percent, setPercent] = useState(from);
+  useEffect(() => {
+    setTimeout(() => {
+      setPercent(1);
+    }, delay);
+  }, [setPercent, delay]);
+  console.log("box");
+  return (
+    <div
+      style={{
+        opacity: `${percent}`,
+        transition: `opacity ${duration}s ease-out`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
