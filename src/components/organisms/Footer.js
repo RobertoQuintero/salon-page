@@ -3,17 +3,17 @@ import AppLogo from "../ui/logo/AppLogo";
 
 const dataLinks = [
   {
-    icon: "whatsapp",
+    icon: "fab fa-whatsapp",
     text: "Whatsapp",
     href: "https://wa.me/5217828282579",
   },
   {
-    icon: "facebook",
+    icon: "fab fa-facebook-f",
     text: "Facebook",
     href: "https://www.facebook.com/adrianamartinez.chachis",
   },
   {
-    icon: "map-marker",
+    icon: "fas fa-map-marker-alt",
     text: "Maps",
     href: "http://www.google.com/maps/place/20.53350902273966,-97.43478181371314",
   },
@@ -58,7 +58,7 @@ const CustomLink = ({ icon, text, href }) => {
         rel="noreferrer"
         target="_blank"
       >
-        <i className={`fa fa-${icon} footer__links-item-icon`}></i>
+        <i className={`${icon} footer__links-item-icon`}></i>
       </a>
       <p className="footer__links-item-text">{text}</p>
     </div>

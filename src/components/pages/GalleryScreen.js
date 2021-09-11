@@ -1,7 +1,6 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
 import { Redirect } from "react-router-dom";
-import { FadeIn } from "../organisms/Banner";
 
 const GalleryScreen = () => {
   if (window.location.pathname !== "/fotos") return <Redirect to="/" />;
@@ -62,42 +61,33 @@ const GalleryScreen = () => {
     fontWeight: "bold",
   };
   return (
-    <FadeIn from={0.1}>
-      <div className="App">
-        <div style={{ textAlign: "center" }}>
-          <div
-            style={{
-              padding: "0 20px",
-            }}
-          >
-            <Carousel
-              data={data}
-              time={5000}
-              width="850px"
-              height="500px"
-              captionStyle={captionStyle}
-              radius="10px"
-              slideNumber={true}
-              slideNumberStyle={slideNumberStyle}
-              captionPosition="bottom"
-              automatic={true}
-              dots={true}
-              pauseIconColor="white"
-              pauseIconSize="40px"
-              slideBackgroundColor="darkgrey"
-              slideImageFit="cover"
-              thumbnails={true}
-              thumbnailWidth="100px"
-              style={{
-                textAlign: "center",
-                maxWidth: "850px",
-                margin: "40px auto",
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    </FadeIn>
+    <section className="fadeIn">
+      <Carousel
+        data={data}
+        time={4000}
+        width="850px"
+        height="500px"
+        captionStyle={captionStyle}
+        radius="10px"
+        slideNumber={true}
+        slideNumberStyle={slideNumberStyle}
+        captionPosition="bottom"
+        automatic={true}
+        dots={true}
+        pauseIconColor="white"
+        pauseIconSize="40px"
+        slideBackgroundColor="darkgrey"
+        slideImageFit="cover"
+        thumbnails={true}
+        thumbnailWidth="100px"
+        style={{
+          textAlign: "center",
+          maxWidth: "850px",
+          margin: "0 auto",
+          padding: "30px 0",
+        }}
+      />
+    </section>
   );
 };
 

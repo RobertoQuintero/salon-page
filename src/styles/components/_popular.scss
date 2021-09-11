@@ -26,6 +26,7 @@
   box-shadow: 0 2px 15px lighten($color: grey, $amount:40);
   &__link{
     color: darken($color: pink, $amount: 20);
+    display: inline-block;
     margin-top: 3px;
     font-size: 14px;
     text-align: left;
